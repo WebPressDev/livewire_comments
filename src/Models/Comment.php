@@ -12,11 +12,12 @@ use Usamamuneerchaudhary\Commentify\Database\Factories\CommentFactory;
 use Usamamuneerchaudhary\Commentify\Models\Presenters\CommentPresenter;
 use Usamamuneerchaudhary\Commentify\Scopes\CommentScopes;
 use Usamamuneerchaudhary\Commentify\Scopes\HasLikes;
+use Usamamuneerchaudhary\Commentify\Scopes\HasDislikes;
 
 class Comment extends Model
 {
 
-    use CommentScopes, SoftDeletes, HasFactory, HasLikes;
+    use CommentScopes, SoftDeletes, HasFactory, HasLikes, HasDislikes;
 
     /**
      * @var string
@@ -30,6 +31,7 @@ class Comment extends Model
 
     protected $withCount = [
         'likes',
+        'dislikes',
     ];
 
     /**
