@@ -9,6 +9,7 @@ use Livewire\Livewire;
 use Usamamuneerchaudhary\Commentify\Http\Livewire\Comment;
 use Usamamuneerchaudhary\Commentify\Http\Livewire\Comments;
 use Usamamuneerchaudhary\Commentify\Http\Livewire\Like;
+use Usamamuneerchaudhary\Commentify\Http\Livewire\Dislike;
 use Usamamuneerchaudhary\Commentify\Policies\CommentPolicy;
 
 class CommentifyServiceProvider extends ServiceProvider
@@ -53,5 +54,6 @@ class CommentifyServiceProvider extends ServiceProvider
         Livewire::component('comments', Comments::class);
         Livewire::component('comment', Comment::class);
         Livewire::component('like', Like::class);
+        Livewire::component('dislike', Disike::class);
     }
 }
